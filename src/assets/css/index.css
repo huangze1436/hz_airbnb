@@ -13,3 +13,6 @@ ul,
 li {
   list-style: none;
 }
+body {
+  font-style: 14px;
+}
