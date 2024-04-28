@@ -4,6 +4,8 @@ import {HomeWrapper} from './style'
 import HomeBanner from './c-cpns/home-banner';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchHomeDateAction } from '../../store/modules/home';
+import SectionHeader from '../../components/section-header';
+import RoomItem from '../../components/room-item';
 
 const Home = memo(() => {
   //从redux中获取数据
@@ -20,7 +22,14 @@ const Home = memo(() => {
     <HomeWrapper>
       <HomeBanner/>
       <div className="content">
-        {goodPriceInfo.title}
+        <div className="good-price">
+          <SectionHeader title={goodPriceInfo.title}></SectionHeader>
+          <ul className='room-list'>
+            {goodPriceInfo.list?.slice(0,8).map(item =>
+               <RoomItem key={item.id} itemData={item}></RoomItem>
+               )}
+          </ul>
+        </div>
       </div>
     </HomeWrapper>
    
