@@ -30,7 +30,7 @@ export const ItemWapper = styled.div`
     margin: 10px 0 5px;
     font-size: 12px;
     font-weight: 700;
-    color: ${ props => props.verifyColor};
+    color: ${ props => props.verifycolor};
    
   }
   .name { 
@@ -49,5 +49,21 @@ export const ItemWapper = styled.div`
   }
   .price {
     margin: 8px 0;
+    font-size: 14px;
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: ${props => props.theme.text.primaryColor};
+    font-size: 12px;
+    .Mui-readOnly {
+      margin-right: -2px;
+    }
+    .count {
+      margin:0 2px 0 4px;
+    }
+    .extra {
+    }
   }
 `
