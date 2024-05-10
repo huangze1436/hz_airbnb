@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
-export const HomeWrapper = styled.div`
-    .content {
-      width: 1032px;
-      margin: 0 auto;
-    }
-    .good-price {
-      margin-top: 30px;
+export const HomeSetionV1Wapper = styled.div`
+     margin-top: 30px;
       .room-list {
         display: flex;
         flex-direction: row;
@@ -14,6 +9,4 @@ export const HomeWrapper = styled.div`
         flex-wrap: wrap;
         margin: 0 -8px;
       }
-    }
-  
-  `
+`

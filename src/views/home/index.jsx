@@ -1,11 +1,9 @@
 import React, { memo, useEffect, useState } from 'react';
-import Hyrequest from '../../services/request'
 import {HomeWrapper} from './style'
 import HomeBanner from './c-cpns/home-banner';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchHomeDateAction } from '../../store/modules/home';
-import SectionHeader from '../../components/section-header';
-import RoomItem from '../../components/room-item';
+import HomeSetionV1 from './c-cpns/home-setion-v1';
 
 const Home = memo(() => {
   //从redux中获取数据
@@ -23,22 +21,8 @@ const Home = memo(() => {
     <HomeWrapper>
       <HomeBanner/>
       <div className="content">
-        <div className="good-price">
-          <SectionHeader title={goodPriceInfo.title}></SectionHeader>
-            <ul className='room-list'>
-              {goodPriceInfo.list?.slice(0,8).map(item =>
-                <RoomItem key={item.id} itemData={item}></RoomItem>
-                )}
-            </ul>
-        </div>
-        <div className="high-score">
-          <SectionHeader title={highScoreInfo.title} subtitle={highScoreInfo.subtitle}></SectionHeader>
-            <ul className='room-list'>
-              {highScoreInfo.list?.slice(0,8).map(item =>
-                <RoomItem key={item.id} itemData={item}></RoomItem>
-                )}
-            </ul>
-        </div>
+        <HomeSetionV1 infoData={goodPriceInfo}></HomeSetionV1>
+        <HomeSetionV1 infoData={highScoreInfo}></HomeSetionV1>
       </div>
     </HomeWrapper>
    
