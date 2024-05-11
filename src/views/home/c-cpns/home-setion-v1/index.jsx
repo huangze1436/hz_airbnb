@@ -9,7 +9,7 @@ const HomeSetionV1 = memo((props)=>{
     return (
         <HomeSetionV1Wapper>
             <SectionHeader title={infoData.title}></SectionHeader>
-            <SectionRooms rooms={infoData.list}></SectionRooms>
+            <SectionRooms rooms={infoData.list} part={'25%'}></SectionRooms>
         </HomeSetionV1Wapper>
         )
 

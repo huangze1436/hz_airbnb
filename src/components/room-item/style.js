@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ItemWapper = styled.div`
-  width: 25%;
+  width: ${(props) => props.part};
   padding: 8px;
   box-sizing: border-box;
   flex-shrink: 0;

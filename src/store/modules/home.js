@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import { getHomeGoodPriceDate ,getHomeHighScoreData} from '../../services'
+import { getHomeDiscountData, getHomeGoodPriceDate ,getHomeHighScoreData} from '../../services'
 
 export const fetchHomeDateAction = createAsyncThunk('fetchHomeDate',   (payload, {dispatch}) => {
     getHomeGoodPriceDate().then(res=>{
@@ -8,6 +8,10 @@ export const fetchHomeDateAction = createAsyncThunk('fetchHomeDate',   (payload,
 
     getHomeHighScoreData().then(res=>{
       dispatch(changeHighScoreInfo(res))
+    })
+    getHomeDiscountData().then(res=>{
+      console.log(res);
+      dispatch(changeDiscountInfo(res))
     })
 })
 
@@ -38,10 +42,13 @@ const homeSlice = createSlice({
         },
         changeHighScoreInfo(state, {payload}) {
           state.highScoreInfo = payload
-        }
+        },
+        changeDiscountInfo(state, {payload}) {
+          state.discountInfo = payload
+        },
     },
     
 })
-export const {changeGoodPriceInfo,changeHighScoreInfo} = homeSlice.actions
+export const {changeGoodPriceInfo,changeHighScoreInfo, changeDiscountInfo} = homeSlice.actions
 
 export default homeSlice.reducer
