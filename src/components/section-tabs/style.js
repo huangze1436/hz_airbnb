@@ -24,6 +24,7 @@ ul {
     }
     .active {
         background-color: ${props=>props.theme.color.secondaryColor};
+        border: 1px solid ${props=>props.theme.color.secondaryColor};
         color: #fff;
     }
 }
