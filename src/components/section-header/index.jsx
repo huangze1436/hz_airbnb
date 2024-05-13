@@ -4,7 +4,6 @@ import {HeaderWrapper} from './style'
 
 const SectionHeader = memo((props) => {
     const {title, subtitle = '默认主标题数据'} = props;
-    console.log(subtitle);
   return (
     <HeaderWrapper> 
       <h3 className="title">{title}</h3>

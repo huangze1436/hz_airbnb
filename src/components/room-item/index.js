@@ -5,8 +5,6 @@ import {Rating} from '@mui/material';
 
 const RoomItem = memo((props) => {
     const {itemData,part } = props;
-    console.log('part:');
-    console.log(part);
   return (
     <ItemWapper verifycolor={itemData?.verify_info?.text_color || '#39576a'} part={part?part:'25%'}> 
       <div className='inner'>

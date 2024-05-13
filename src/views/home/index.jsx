@@ -5,6 +5,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchHomeDateAction } from '../../store/modules/home';
 import HomeSetionV1 from './c-cpns/home-setion-v1';
 import HomeSetionV2 from './c-cpns/home-setion-v2';
+import  isEmptyO  from '../../utils/index'
 
 const Home = memo(() => {
   //从redux中获取数据
@@ -26,13 +27,13 @@ console.log(discountInfo);
     <HomeWrapper>
       <HomeBanner/>
       <div className="content">
-        <HomeSetionV2
-          infoData={discountInfo?.dest_list?.['成都']}
+        { isEmptyO(discountInfo||{}) && <HomeSetionV2
+          infoData={discountInfo?.dest_list}
           title={discountInfo?.title}
           subtitle={discountInfo?.subtitle}
           tabNames={tabNames}
           >
-        </HomeSetionV2> 
+        </HomeSetionV2>} 
         <HomeSetionV1 infoData={goodPriceInfo}></HomeSetionV1>
         <HomeSetionV1 infoData={highScoreInfo}></HomeSetionV1>
       </div>
