@@ -1,6 +1,8 @@
 import React , {memo} from 'react';
 import PropTypes from 'prop-types';
 import {TabWapper} from './style';
+import ScrollView from '../../base-ui/scroll-view';
+import classNames from 'classnames';
 
 const SectionTabs = memo((props) => {
     const {tabNames, tabClick} = props;
@@ -12,16 +14,17 @@ const SectionTabs = memo((props) => {
     }
   return (
     <TabWapper> 
-        <ul>
+      <ScrollView>
             {tabNames?.map((item,index) => {
-                return <li key={index}
+                return <div key={index}
                         onClick={e=>itemClickHandle(index)}
-                        className={itemIndex === index ? 'active' : ''}
+                        className={classNames( "item",{active:itemIndex === index })}
                         >
                         {item}
-                        </li>
+                        </div>
             })}
-        </ul>
+      </ScrollView>
+        
     </TabWapper>
     
   )

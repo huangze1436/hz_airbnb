@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 export  const TabWapper = styled.div `
-ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 24px;
-    li {
-        flex: 1;
-        border: 1px solid #ccc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 2px 5px;
-        padding: 10px 1px;
-        border-radius:3px;
+
+    .item {
+        box-sizing: border-box;
+        flex-basis: 120px;
+        flex-shrink: 0;
+        padding: 14px 16px;
+        margin-right: 16px;
+        border-radius: 3px;
+        font-size: 17px;
+        text-align: center;
+        border: 0.5px solid #D8D8D8;
+        white-space: nowrap;
         cursor: pointer;
-        ${props=>props.theme.mixin.boxShadow}
+        ${props => props.theme.mixin.boxShadow};
     }
     li:hover {
 
@@ -27,6 +24,5 @@ ul {
         border: 1px solid ${props=>props.theme.color.secondaryColor};
         color: #fff;
     }
-}
 
 `

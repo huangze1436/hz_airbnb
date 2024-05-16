@@ -18,8 +18,9 @@ const HomeSetionV2 = memo((props)=>{
     },[])
     return (
         <HomeSetionV2Wapper>
-            <SectionTabs tabNames={tabNames} tabClick={tabClickHandle}></SectionTabs>
             <SectionHeader title={title} subtitle={subtitle}></SectionHeader>
+            <SectionTabs tabNames={tabNames} tabClick={tabClickHandle}></SectionTabs>
+
             <SectionRooms rooms={nowCityList} part={'33.3%'}></SectionRooms>
             <SectionFooter title={shouCity}></SectionFooter>
         </HomeSetionV2Wapper>
