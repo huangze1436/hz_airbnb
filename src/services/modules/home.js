@@ -23,3 +23,15 @@ export function getHomeHotRecommendData() {
         url: '/home/hotrecommenddest'
     })
 }
+
+export function getHomeLongForDate() {
+    return hyRequest.get({
+        url: '/home/longfor'
+    })
+}
+
+export function getHomePlusDate() {
+    return hyRequest.get({
+        url: '/home/plus'
+    })
+}
