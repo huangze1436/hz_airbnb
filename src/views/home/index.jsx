@@ -19,8 +19,6 @@ const Home = memo(() => {
     longforInfo:state.home.longforInfo,
     plusInfo:state.home.plusInfo
   }),shallowEqual)
-  console.log(555);
-  console.log(plusInfo);
   const tabNames = discountInfo?.dest_address?.map(item=>item.name)
   const tabNames2 = hotRecommendInfo?.dest_address?.map(item=>item.name)
   // const tabNames2 = hotRecommendInfo?.dest_address?.map(item=>item.name)
@@ -29,7 +27,6 @@ const Home = memo(() => {
   useEffect(() => {
     dispatch(fetchHomeDateAction())
   }, [dispatch])
-console.log(discountInfo);
   return (
     <HomeWrapper>
       <HomeBanner/>

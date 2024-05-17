@@ -4,8 +4,6 @@ import { ItemWrapper } from './style'
 
 const LongforItem = memo((props) => {
   const { itemData } = props
-  console.log(1212);
-  console.log(itemData);
 
   return (
     <ItemWrapper>
