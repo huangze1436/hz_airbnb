@@ -16,11 +16,11 @@ const ScrollView = memo((props) => {
         const totalDistance = scrollWidth - clientWidth;
         totalDistancRef.current = totalDistance
         setShowRight(totalDistance>0)
-        console.log(scrollWidth,clientWidth);
+        
 
     },[props.children])
     // function rightClickHandel () {
-    //     const newIndex = positionIndex+1
+    //     const newIndex = posi tionIndex+1
     //     const newEl = scrollContentRef.current.children[newIndex]
     //     const newElOffsetLeft = newEl.offsetLeft
     //     console.log(newElOffsetLeft);

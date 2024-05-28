@@ -6,6 +6,7 @@ import AppFooter from './components/app-footer';
 import {AppWrapper} from './style';
 
 const App = memo(() => {
+  console.log(this);
   return (
    <AppWrapper>
       <AppHeader/>

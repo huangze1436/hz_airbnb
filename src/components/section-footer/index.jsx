@@ -12,7 +12,7 @@ const SectionFooter = memo((props) => {
     }
     const navigate = useNavigate();
     function toDetail () {
-      navigate('/detail')
+      navigate('/entire')
     }
   return (
     <SectionFooterWrapper color={title ? '#00848A' : '#000'}> 
