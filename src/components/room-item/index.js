@@ -4,10 +4,14 @@ import {ItemWapper} from './style'
 import {Rating} from '@mui/material';
 
 const RoomItem = memo((props) => {
-    const {itemData,part } = props;
+    const {itemData, part, itemClick } = props;
+    function toDetail () {
+      console.log(3);
+      itemClick && itemClick()
+    }
   return (
     <ItemWapper verifycolor={itemData?.verify_info?.text_color || '#39576a'} part={part?part:'25%'}> 
-      <div className='inner'>
+      <div className='inner' onClick={toDetail}>
         <div className='cover'>
           <img src={itemData.picture_url} alt="" />
         </div>
@@ -38,7 +42,8 @@ const RoomItem = memo((props) => {
   )
   RoomItem.propTypes = {
     itemData:PropTypes.object,
-    part:PropTypes.string
+    part:PropTypes.string,
+    itemClick:PropTypes.func
   }
 })
 
