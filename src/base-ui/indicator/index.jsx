@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useRef } from "react";
 import {IndicatorWrapper} from './style'
+import PropTypes from 'prop-types'
 
 const Indicator = memo((props)=>{
     console.log(props,1);
@@ -43,5 +44,8 @@ const Indicator = memo((props)=>{
     </IndicatorWrapper>
     )
 })
+Indicator.propTypes = {
+    currentIndex: PropTypes.number
+  }
 
 export default Indicator
